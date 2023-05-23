@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -97,6 +99,23 @@ public class Calculator extends JFrame{
             jTextField.setText(jTextField.getText() + buttDot);
         });
 
+//        buttonEqual.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                double result = Double.parseDouble(String.valueOf(jTextField.getText().charAt(0)));
+//                for (int i = 1; i < jTextField.getText().length(); i += 2) {
+//                    String operator = String.valueOf(jTextField.getText().charAt(i));
+//                    double value = Double.parseDouble(String.valueOf((jTextField.getText().charAt(i+1))));
+//                    if (operator.equals("+")) {
+//                        result += value;
+//                    } else if (operator.equals("-")) {
+//                        result -= value;
+//                    }
+//                }
+//                jTextField.setText(String.valueOf(result));
+//            }
+//        });
+
         buttonEqual.addActionListener(e -> {
             try {
                 ArrayList<Double> doubleArrayList = new ArrayList<>();
@@ -164,8 +183,8 @@ public class Calculator extends JFrame{
                     jTextField.setText(String.valueOf(result));
                     index.remove(0);
                 }
-            }catch (Exception exception){
-                System.out.println(Arrays.toString(exception.getStackTrace()));}
+            }catch (Exception ignored){
+                }
         });
 
         buttonMultiply.addActionListener(e -> {
