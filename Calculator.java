@@ -96,6 +96,7 @@ public class Calculator extends JFrame {
             jTextField.setText(jTextField.getText() + buttDot);
         });
 
+<<<<<<< HEAD
         // buttonEqual.addActionListener(new ActionListener() {
         // @Override
         // public void actionPerformed(ActionEvent e) {
@@ -212,6 +213,7 @@ public class Calculator extends JFrame {
 
                 jTextField.setText(res + "");
             }
+
 
         });
         buttonMultiply.addActionListener(e -> {
